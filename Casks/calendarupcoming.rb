@@ -1,0 +1,26 @@
+cask "calendarupcoming" do
+  version "2.1.2"
+  sha256 "2bd7fac01ca8c50329ffa4879224c5557bfdb387ad6404a4156c643bff2e8228"
+
+  url "https://github.com/PerpetualBeta/CalendarUpcoming/releases/download/v#{version}/CalendarUpcoming.zip",
+      verified: "github.com/PerpetualBeta/CalendarUpcoming/"
+  name "CalendarUpcoming"
+  desc "Menu-bar app that alerts you to upcoming calendar events"
+  homepage "https://jorviksoftware.cc/utilities/calendarupcoming"
+
+  livecheck do
+    url "https://jorviksoftware.cc/appcasts/calendarupcoming.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: :sonoma
+
+  app "CalendarUpcoming.app"
+
+  zap trash: [
+    "~/Library/Caches/cc.jorviksoftware.CalendarUpcoming",
+    "~/Library/HTTPStorages/cc.jorviksoftware.CalendarUpcoming",
+    "~/Library/Preferences/cc.jorviksoftware.CalendarUpcoming.plist",
+  ]
+end

@@ -1,0 +1,26 @@
+cask "quitprotect" do
+  version "2.0.8"
+  sha256 "476521b0a2dc9c57df161cb0bac62a533d35c19859e70d79bd3422dc1697bda4"
+
+  url "https://github.com/PerpetualBeta/QuitProtect/releases/download/v#{version}/QuitProtect.zip",
+      verified: "github.com/PerpetualBeta/QuitProtect/"
+  name "QuitProtect"
+  desc "Prevent accidental quits with double-press or hold-to-quit"
+  homepage "https://jorviksoftware.cc/utilities/quitprotect"
+
+  livecheck do
+    url "https://jorviksoftware.cc/appcasts/quitprotect.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: :sonoma
+
+  app "QuitProtect.app"
+
+  zap trash: [
+    "~/Library/Caches/cc.jorviksoftware.QuitProtect",
+    "~/Library/HTTPStorages/cc.jorviksoftware.QuitProtect",
+    "~/Library/Preferences/cc.jorviksoftware.QuitProtect.plist",
+  ]
+end

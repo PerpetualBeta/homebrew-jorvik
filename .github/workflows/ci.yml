@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Casks are macOS-only, so there is no Linux leg here on purpose:
+# `brew audit --tap=` eagerly loads casks before its own OS filter and
+# trips over them on a Linux runner.
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: homebrew-jorvik
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Link the checkout in as a tap
+        run: |
+          TAPS="$(brew --repository)/Library/Taps/perpetualbeta"
+          mkdir -p "$TAPS"
+          ln -s "$GITHUB_WORKSPACE/homebrew-jorvik" "$TAPS/homebrew-jorvik"
+          brew tap
+
+      - name: brew style
+        run: brew style perpetualbeta/jorvik
+
+      - name: brew audit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: brew audit --cask --online --strict --tap=perpetualbeta/jorvik
+
+      - name: Casks are in step with the releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ./homebrew-jorvik/tools/generate-casks.py --check
