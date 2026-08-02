@@ -37,7 +37,7 @@ brew install --cask menutidy
 | `citadel` | Doom-like first-person shooter set in the Strataris universe |
 | `clipman` | Clipboard history in a browsable menu-bar popover |
 | `copylens` | Capture any screen region as a table, as text, or as an image |
-| `hawkeye` | Magnify part of a screenshot into a callout and save it as PNG |
+| `jorvik-hawkeye` | Magnify part of a screenshot into a callout and save it as PNG |
 | `hypercaps` | Turn Caps Lock into a Hyper key for conflict-free shortcuts |
 | `jorvik-daily-news` | RSS reader that publishes a finite, today-only newspaper |
 | `lookout` | Menu-bar watcher for GitHub notifications, reviews and failing CI |
@@ -53,9 +53,14 @@ brew install --cask menutidy
 | `strataris` | Colony-defence shoot-'em-up with procedurally generated worlds |
 | `windowpin` | Pin any window as a floating, always-on-top overlay |
 
-Two tokens collide with unrelated casks in `homebrew/cask` — `ballast` and
-`spaceman`. Installing by the fully-qualified name always resolves to the Jorvik
-one; only bare short names are ambiguous, and only if you have both taps.
+`hawkeye` is taken by a formula in `homebrew/core`, which Homebrew treats as a
+hard conflict, so that one carries the vendor prefix Homebrew's own convention
+calls for: **`jorvik-hawkeye`**.
+
+`ballast` and `spaceman` collide with unrelated *casks* in `homebrew/cask`,
+which is permitted. Installing by the fully-qualified name always resolves to
+the Jorvik one; only bare short names are ambiguous, and only if you have both
+taps.
 
 ## Updates
 

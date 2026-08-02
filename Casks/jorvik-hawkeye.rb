@@ -1,4 +1,4 @@
-cask "hawkeye" do
+cask "jorvik-hawkeye" do
   version "1.0.1"
   sha256 "3184b7e2185032a00e3fc6ff089aa45ddd7915ab23ceb2ef9435c3d21a662e52"
 

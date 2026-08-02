@@ -117,7 +117,7 @@
     "appcast": "https://jorviksoftware.cc/appcasts/copylens.xml"
   },
   "HawkEye": {
-    "token": "hawkeye",
+    "token": "jorvik-hawkeye",
     "name": "HawkEye",
     "desc": "Magnify part of a screenshot into a callout and save it as PNG",
     "homepage": "https://jorviksoftware.cc/utilities/hawkeye",
