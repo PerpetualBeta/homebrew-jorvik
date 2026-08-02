@@ -9,8 +9,8 @@ cask "rainbowapple" do
   homepage "https://jorviksoftware.cc/utilities/rainbowapple"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/rainbowapple.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

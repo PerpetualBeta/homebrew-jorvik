@@ -9,8 +9,8 @@ cask "screenlock" do
   homepage "https://jorviksoftware.cc/utilities/screenlock"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/screenlock.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

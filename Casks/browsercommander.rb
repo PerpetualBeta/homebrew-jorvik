@@ -9,8 +9,8 @@ cask "browsercommander" do
   homepage "https://jorviksoftware.cc/utilities/browsercommander"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/browsercommander.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

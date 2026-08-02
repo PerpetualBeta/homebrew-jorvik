@@ -9,8 +9,8 @@ cask "calendarupcoming" do
   homepage "https://jorviksoftware.cc/utilities/calendarupcoming"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/calendarupcoming.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

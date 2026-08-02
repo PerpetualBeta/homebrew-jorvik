@@ -9,8 +9,8 @@ cask "strataris" do
   homepage "https://jorviksoftware.cc/games/strataris"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/strataris.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

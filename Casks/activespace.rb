@@ -9,8 +9,8 @@ cask "activespace" do
   homepage "https://jorviksoftware.cc/utilities/activespace"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/activespace.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

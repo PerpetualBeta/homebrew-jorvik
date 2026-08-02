@@ -9,8 +9,8 @@ cask "ballast" do
   homepage "https://jorviksoftware.cc/utilities/ballast"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/ballast.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

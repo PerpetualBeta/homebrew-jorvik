@@ -9,8 +9,8 @@ cask "hawkeye" do
   homepage "https://jorviksoftware.cc/utilities/hawkeye"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/hawkeye.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

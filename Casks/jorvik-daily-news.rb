@@ -9,8 +9,8 @@ cask "jorvik-daily-news" do
   homepage "https://jorviksoftware.cc/apps/dailynews"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/jorvikdailynews.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

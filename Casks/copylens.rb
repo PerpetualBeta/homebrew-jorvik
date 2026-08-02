@@ -9,8 +9,8 @@ cask "copylens" do
   homepage "https://jorviksoftware.cc/utilities/copylens"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/copylens.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

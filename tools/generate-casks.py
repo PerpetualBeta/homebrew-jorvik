@@ -94,22 +94,16 @@ def render(repo, app, version, sha):
         "  livecheck do",
     ]
 
-    if app["appcast"]:
-        # The Sparkle appcast is authoritative for the apps that have one.
-        #
-        # Take short_version explicitly. Jorvik appcasts carry both
-        # sparkle:shortVersionString (2.1.0) and sparkle:version (a build
-        # timestamp), and the default strategy joins them into "2.1.0,2026…",
-        # which would never match the cask version or the release tag.
-        lines += [
-            f'    url "{app["appcast"]}"',
-            "    strategy :sparkle, &:short_version",
-        ]
-    else:
-        # The two screen savers self-update via nothing at all: a .saver in
-        # /Library/Screen Savers has no process to run an updater, so there is
-        # no appcast to read and the GitHub release is the only source.
-        lines += ["    url :url", "    strategy :github_latest"]
+    # Every cask livechecks the GitHub release, including the 22 that have a
+    # Sparkle appcast.
+    #
+    # The appcast looks like the more authoritative source, and locally it
+    # works, but jorviksoftware.cc sits behind Cloudflare and the appcasts are
+    # not served to a GitHub Actions runner — livecheck came back empty and all
+    # 22 failed audit in CI while the two github_latest savers passed. Reading
+    # the release also means livecheck and the url stanza resolve from the same
+    # place, so they cannot disagree.
+    lines += ["    url :url", "    strategy :github_latest"]
 
     lines += ["  end", ""]
 

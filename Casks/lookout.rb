@@ -9,8 +9,8 @@ cask "lookout" do
   homepage "https://jorviksoftware.cc/utilities/lookout"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/lookout.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

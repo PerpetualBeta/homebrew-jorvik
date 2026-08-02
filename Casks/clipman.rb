@@ -9,8 +9,8 @@ cask "clipman" do
   homepage "https://jorviksoftware.cc/utilities/clipman"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/clipman.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

@@ -9,8 +9,8 @@ cask "shortcuthud" do
   homepage "https://jorviksoftware.cc/utilities/shortcuthud"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/shortcuthud.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

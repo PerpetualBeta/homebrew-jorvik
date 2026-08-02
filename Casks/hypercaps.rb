@@ -9,8 +9,8 @@ cask "hypercaps" do
   homepage "https://jorviksoftware.cc/utilities/hypercaps"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/hypercaps.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

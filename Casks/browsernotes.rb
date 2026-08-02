@@ -9,8 +9,8 @@ cask "browsernotes" do
   homepage "https://jorviksoftware.cc/utilities/browsernotes"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/browsernotes.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

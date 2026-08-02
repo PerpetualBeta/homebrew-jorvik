@@ -9,8 +9,8 @@ cask "quitprotect" do
   homepage "https://jorviksoftware.cc/utilities/quitprotect"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/quitprotect.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

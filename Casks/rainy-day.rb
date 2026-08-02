@@ -9,8 +9,8 @@ cask "rainy-day" do
   homepage "https://jorviksoftware.cc/screensavers/rainyday"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/rainyday.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

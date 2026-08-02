@@ -9,8 +9,8 @@ cask "menutidy" do
   homepage "https://jorviksoftware.cc/utilities/menutidy"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/menutidy.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

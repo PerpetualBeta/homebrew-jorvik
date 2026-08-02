@@ -9,8 +9,8 @@ cask "mirrorguard" do
   homepage "https://jorviksoftware.cc/utilities/mirrorguard"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/mirrorguard.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

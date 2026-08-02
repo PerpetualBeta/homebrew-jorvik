@@ -9,8 +9,8 @@ cask "citadel" do
   homepage "https://jorviksoftware.cc/games/citadel"
 
   livecheck do
-    url "https://jorviksoftware.cc/appcasts/citadel.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
