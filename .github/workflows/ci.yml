@@ -19,16 +19,24 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
 
-      - name: Link the checkout in as a tap
+      # Move rather than symlink. A symlinked tap works for brew itself, but
+      # running a script back through the link resolves into a loop
+      # ("Too many levels of symbolic links").
+      - name: Move the checkout into place as a tap
+        id: tap
         run: |
           TAPS="$(brew --repository)/Library/Taps/perpetualbeta"
           mkdir -p "$TAPS"
-          ln -s "$GITHUB_WORKSPACE/homebrew-jorvik" "$TAPS/homebrew-jorvik"
+          mv "$GITHUB_WORKSPACE/homebrew-jorvik" "$TAPS/homebrew-jorvik"
+          echo "path=$TAPS/homebrew-jorvik" >> "$GITHUB_OUTPUT"
           brew tap
 
       - name: brew style
         run: brew style perpetualbeta/jorvik
 
+      # --online fetches and checksums every release, and catches the
+      # cask-versus-core-formula token collisions that the cask API alone
+      # will not show you.
       - name: brew audit
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,4 +45,5 @@ jobs:
       - name: Casks are in step with the releases
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./homebrew-jorvik/tools/generate-casks.py --check
+        working-directory: ${{ steps.tap.outputs.path }}
+        run: ./tools/generate-casks.py --check
