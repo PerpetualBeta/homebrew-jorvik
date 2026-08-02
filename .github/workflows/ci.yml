@@ -19,14 +19,18 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
 
-      # Move rather than symlink. A symlinked tap works for brew itself, but
-      # running a script back through the link resolves into a loop
-      # ("Too many levels of symbolic links").
-      - name: Move the checkout into place as a tap
+      # setup-homebrew has already tapped this repository from GitHub, so the
+      # tap directory exists before we get here — which silently turned an
+      # earlier `ln -s` into a link *inside* it pointing back at the workspace,
+      # and a loop. Replace it outright so what gets audited is the checkout in
+      # hand, not the pushed default branch (which is not the same thing on a
+      # pull request).
+      - name: Put the checkout in place as the tap
         id: tap
         run: |
           TAPS="$(brew --repository)/Library/Taps/perpetualbeta"
           mkdir -p "$TAPS"
+          rm -rf "$TAPS/homebrew-jorvik"
           mv "$GITHUB_WORKSPACE/homebrew-jorvik" "$TAPS/homebrew-jorvik"
           echo "path=$TAPS/homebrew-jorvik" >> "$GITHUB_OUTPUT"
           brew tap
