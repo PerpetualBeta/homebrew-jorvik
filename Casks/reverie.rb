@@ -1,6 +1,6 @@
 cask "reverie" do
-  version "1.0.6"
-  sha256 "40076bf2e6a9bb61ebc554b3ef3c88266c34a585788f621ac0efa9bb44b40b18"
+  version "1.0.7"
+  sha256 "cb76b05d6395f04ceca1ac97541051d50c01306ef956e5f675225b5e7ac0ff09"
 
   url "https://github.com/PerpetualBeta/Reverie/releases/download/v#{version}/Reverie.zip",
       verified: "github.com/PerpetualBeta/Reverie/"
