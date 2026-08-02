@@ -1,8 +1,8 @@
 cask "asciisaver" do
   version "1.3.7"
-  sha256 "ef3fdb8704765b9e20bfa6f00e5024f2624db9cb85e248f3be86feb2782b0f76"
+  sha256 "24c78de0ef6816d01d54401e6d098ed1a6c2925ebcd04dc88c2a1590552b42d2"
 
-  url "https://github.com/PerpetualBeta/ASCIISaver/releases/download/v#{version}/ASCIISaver.zip",
+  url "https://github.com/PerpetualBeta/ASCIISaver/releases/download/v#{version}/ASCIISaver.pkg",
       verified: "github.com/PerpetualBeta/ASCIISaver/"
   name "ASCII Saver"
   desc "Screen saver that renders the live camera feed as ASCII art"
@@ -15,7 +15,9 @@ cask "asciisaver" do
 
   depends_on macos: :sonoma
 
-  screen_saver "ASCIISaver.saver"
+  pkg "ASCIISaver.pkg"
+
+  uninstall pkgutil: "com.jorviksoftware.ASCIISaver.*"
 
   zap trash: [
     "~/Library/Caches/com.jorviksoftware.ASCIISaver",

@@ -7,10 +7,12 @@
     "bundle": "ASCIISaver.saver",
     "kind": "saver",
     "bundleID": "com.jorviksoftware.ASCIISaver",
-    "zipName": "ASCIISaver.zip",
+    "zipName": "ASCIISaver.pkg",
     "macos": "sonoma",
     "arch": null,
-    "appcast": null
+    "appcast": null,
+    "artifact": "pkg",
+    "pkgutil": "com.jorviksoftware.ASCIISaver.*"
   },
   "ActiveSpace": {
     "token": "activespace",

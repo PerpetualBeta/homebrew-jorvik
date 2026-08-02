@@ -118,8 +118,18 @@ def render(repo, app, version, sha):
     lines.append(f'  depends_on macos: :{app["macos"]}')
     lines.append("")
 
-    stanza = "screen_saver" if app["kind"] == "saver" else "app"
-    lines.append(f'  {stanza} "{app["bundle"]}"')
+    if app.get("artifact") == "pkg":
+        # Some products are more than one bundle and the installer is the only
+        # thing that places all of them. ASCII Saver is the case in point: its
+        # .pkg carries both the .saver and the camera agent the saver needs in
+        # order to be granted camera access, so shipping just the zipped .saver
+        # would install something that cannot work.
+        lines.append(f'  pkg "{app["zipName"]}"')
+        lines.append("")
+        lines.append(f'  uninstall pkgutil: "{app["pkgutil"]}"')
+    else:
+        stanza = "screen_saver" if app["kind"] == "saver" else "app"
+        lines.append(f'  {stanza} "{app["bundle"]}"')
     lines.append("")
 
     bid = app["bundleID"]
@@ -154,8 +164,12 @@ def main():
             failed.append(f"{repo}: {e}")
             continue
 
+        # --refresh-sha implies --force: asking for fresh checksums and then
+        # skipping every cask whose version happens to be unchanged would
+        # discard exactly the work that was requested.
+        rewrite = args.force or args.refresh_sha
         have = current_version(token)
-        if have == version and not args.force:
+        if have == version and not rewrite:
             continue
 
         if args.check:
