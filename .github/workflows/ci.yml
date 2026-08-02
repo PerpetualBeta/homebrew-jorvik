@@ -19,20 +19,21 @@ jobs:
       - name: Set up Homebrew
         uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
 
-      # setup-homebrew has already tapped this repository from GitHub, so the
-      # tap directory exists before we get here — which silently turned an
-      # earlier `ln -s` into a link *inside* it pointing back at the workspace,
-      # and a loop. Replace it outright so what gets audited is the checkout in
-      # hand, not the pushed default branch (which is not the same thing on a
-      # pull request).
-      - name: Put the checkout in place as the tap
+      # setup-homebrew relocates a tap checkout into the Taps directory itself,
+      # so by this point $GITHUB_WORKSPACE/homebrew-jorvik is gone and the tap
+      # is already in place. Earlier revisions of this workflow tried to
+      # symlink and then to mv the checkout across, and both fought it: the
+      # link landed *inside* the existing tap and looped, and the mv had no
+      # source left to move. Locate it and move on.
+      - name: Locate the tap
         id: tap
         run: |
-          TAPS="$(brew --repository)/Library/Taps/perpetualbeta"
-          mkdir -p "$TAPS"
-          rm -rf "$TAPS/homebrew-jorvik"
-          mv "$GITHUB_WORKSPACE/homebrew-jorvik" "$TAPS/homebrew-jorvik"
-          echo "path=$TAPS/homebrew-jorvik" >> "$GITHUB_OUTPUT"
+          TAP="$(brew --repository)/Library/Taps/perpetualbeta/homebrew-jorvik"
+          if [ ! -d "$TAP" ]; then
+            echo "::error::expected the tap at $TAP; setup-homebrew did not place it"
+            exit 1
+          fi
+          echo "path=$TAP" >> "$GITHUB_OUTPUT"
           brew tap
 
       - name: brew style
