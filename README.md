@@ -69,9 +69,12 @@ so their casks carry `auto_updates true`: Homebrew installs them and then stays
 out of the way, and `brew upgrade` will not fight the in-app updater. Use
 `brew upgrade --cask --greedy` if you want Homebrew to reinstall them anyway.
 
-The two screen savers — `asciisaver` and `reverie` — are the exception. A
-`.saver` bundle has no persistent process to run an updater, so they have no
-Sparkle feed and Homebrew is genuinely their update path.
+**`reverie` is the exception.** It ships as a `.saver` bundle, which has no
+persistent process of its own in which to run an updater, so it has no Sparkle
+feed and Homebrew is genuinely its update path.
+
+`asciisaver` was in the same position until version 2.0, when it became a
+regular app and gained Sparkle along with everything else.
 
 ## Requirements
 

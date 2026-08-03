@@ -4,15 +4,13 @@
     "name": "ASCII Saver",
     "desc": "Screen saver that renders the live camera feed as ASCII art",
     "homepage": "https://jorviksoftware.cc/screensavers/asciisaver",
-    "bundle": "ASCIISaver.saver",
-    "kind": "saver",
-    "bundleID": "com.jorviksoftware.ASCIISaver",
-    "zipName": "ASCIISaver.pkg",
+    "bundle": "ASCII Saver.app",
+    "kind": "app",
+    "bundleID": "cc.jorviksoftware.ASCIISaver",
+    "zipName": "ASCIISaver.zip",
     "macos": "sonoma",
     "arch": null,
-    "appcast": null,
-    "artifact": "pkg",
-    "pkgutil": "com.jorviksoftware.ASCIISaver.*"
+    "appcast": "https://jorviksoftware.cc/appcasts/asciisaver.xml"
   },
   "ActiveSpace": {
     "token": "activespace",
