@@ -1,6 +1,6 @@
 cask "quitprotect" do
-  version "2.0.8"
-  sha256 "476521b0a2dc9c57df161cb0bac62a533d35c19859e70d79bd3422dc1697bda4"
+  version "2.2.0"
+  sha256 "248353ebf15b8abf2805b108b98c5fe8dab92b1586ab4f966403cc63b7aca565"
 
   url "https://github.com/PerpetualBeta/QuitProtect/releases/download/v#{version}/QuitProtect.zip",
       verified: "github.com/PerpetualBeta/QuitProtect/"
