@@ -1,6 +1,6 @@
 cask "hypercaps" do
-  version "2.0.9"
-  sha256 "13be4de18ecd28ddf8cc3a9f80f70ef553c3805b250964a921085ef9a1310ace"
+  version "2.0.10"
+  sha256 "a504ec430b8ea6bf680122220c40106698de00dec2f50a06c8035fb1a2f229a0"
 
   url "https://github.com/PerpetualBeta/HyperCaps/releases/download/v#{version}/HyperCaps.zip",
       verified: "github.com/PerpetualBeta/HyperCaps/"
