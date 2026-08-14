@@ -1,6 +1,6 @@
 cask "asciisaver" do
-  version "2.0.1"
-  sha256 "8309c3f9a3939fd3fa0f8bb3f3502e08bd57713221352b4110e25832e6d27cae"
+  version "2.0.2"
+  sha256 "00717c03eedfcbe4560221bf566d40bd4103e496829bc5313c8bb840f5bd7667"
 
   url "https://github.com/PerpetualBeta/ASCIISaver/releases/download/v#{version}/ASCIISaver.zip",
       verified: "github.com/PerpetualBeta/ASCIISaver/"
