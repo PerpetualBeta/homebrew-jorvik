@@ -1,6 +1,6 @@
 cask "shortcuthud" do
-  version "2.0.9"
-  sha256 "88ad66ec60066f27c5f8bc7ace8ce4909fddd7d795b7035493258ad8e2a15570"
+  version "2.0.10"
+  sha256 "6bd91f1e0bba089746fbe21d0eee65eb1dc2d6fc467efea2325e3a580b8c9628"
 
   url "https://github.com/PerpetualBeta/ShortcutHUD/releases/download/v#{version}/ShortcutHUD.zip",
       verified: "github.com/PerpetualBeta/ShortcutHUD/"

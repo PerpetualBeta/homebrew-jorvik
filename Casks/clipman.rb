@@ -1,6 +1,6 @@
 cask "clipman" do
-  version "2.0.20"
-  sha256 "7b226ce674dfb603f9d6179a3e4bea49cca770236470beaead5b086af88e5fbb"
+  version "2.0.21"
+  sha256 "df4d6e1c21a2d514ced230a81d56313ce56ce31497369cfef7abb8200c6220ba"
 
   url "https://github.com/PerpetualBeta/ClipMan/releases/download/v#{version}/ClipMan.zip",
       verified: "github.com/PerpetualBeta/ClipMan/"

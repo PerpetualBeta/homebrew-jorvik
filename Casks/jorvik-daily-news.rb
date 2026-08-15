@@ -1,6 +1,6 @@
 cask "jorvik-daily-news" do
-  version "1.1.6"
-  sha256 "e8a75ef719af05ad2ba94d12d0d7f3cfa9a366334492c3402a38cdeb8038f903"
+  version "1.1.7"
+  sha256 "39cbbf3cc2f80243868f3d08ec55be1a1ba0657442fad5e564b72b9f100de4c9"
 
   url "https://github.com/PerpetualBeta/JorvikDailyNews/releases/download/v#{version}/JorvikDailyNews.zip",
       verified: "github.com/PerpetualBeta/JorvikDailyNews/"

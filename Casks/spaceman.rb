@@ -1,6 +1,6 @@
 cask "spaceman" do
-  version "2.0.8"
-  sha256 "b130f006f937841807d2371c2fc6b9c66835bc3cc1d959d2ab1c602c16aae129"
+  version "2.0.9"
+  sha256 "23801a00c14d3020a81df4154bd62d470fbf1e47bcf9d97ab647d19900ffeffe"
 
   url "https://github.com/PerpetualBeta/SpaceMan/releases/download/v#{version}/SpaceMan.zip",
       verified: "github.com/PerpetualBeta/SpaceMan/"

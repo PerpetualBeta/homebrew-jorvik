@@ -1,6 +1,6 @@
 cask "mirrorguard" do
-  version "1.0.12"
-  sha256 "ad2192b8434d34ad198c6b4b23e24832faab05e973732e6aaf7530976cfdbdae"
+  version "1.0.13"
+  sha256 "e15d789219509c8f43ba75e23bdcc8bdf22416c37713c91d764391f7c241be21"
 
   url "https://github.com/PerpetualBeta/MirrorGuard/releases/download/v#{version}/MirrorGuard.zip",
       verified: "github.com/PerpetualBeta/MirrorGuard/"

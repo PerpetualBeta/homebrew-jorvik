@@ -1,6 +1,6 @@
 cask "rainy-day" do
-  version "1.1.12"
-  sha256 "3d0677f59ab7bdca1eec4350708e65b121bc4b3b844dcb3c9f25816500dc646f"
+  version "1.1.13"
+  sha256 "082bd7f78f2c39ceb8075bca3addb986e8a565d8174c72392de4867a3db7551c"
 
   url "https://github.com/PerpetualBeta/RainyDay/releases/download/v#{version}/RainyDay.zip",
       verified: "github.com/PerpetualBeta/RainyDay/"
