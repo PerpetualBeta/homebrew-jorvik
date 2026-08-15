@@ -310,5 +310,18 @@
     "macos": "sonoma",
     "arch": null,
     "appcast": "https://jorviksoftware.cc/appcasts/windowpin.xml"
+  },
+  "SaveCannes": {
+    "token": "savecannes",
+    "name": "Save Cannes",
+    "desc": "Screen saver that plays your own films, photographs and live streams",
+    "homepage": "https://jorviksoftware.cc/screensavers/savecannes",
+    "bundle": "Save Cannes.app",
+    "kind": "app",
+    "bundleID": "cc.jorviksoftware.SaveCannes",
+    "zipName": "SaveCannes.zip",
+    "macos": "sonoma",
+    "arch": null,
+    "appcast": "https://jorviksoftware.cc/appcasts/savecannes.xml"
   }
 }
