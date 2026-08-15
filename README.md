@@ -24,6 +24,29 @@ brew trust --cask perpetualbeta/jorvik/menutidy
 brew install --cask menutidy
 ```
 
+### If `brew cleanup` or `brew upgrade` refuses to load a cask
+
+Trusting one cask at a time is the smaller permission and it is the right
+default, but it leaves every *other* cask in this tap untrusted — including the
+ones you have never installed. Commands that walk the whole tap rather than a
+cask you named, `brew cleanup` and `brew upgrade` among them, then stop on the
+first one they do not have permission to read:
+
+```
+Error: Refusing to load cask perpetualbeta/jorvik/lookout from untrusted tap
+```
+
+Trusting the tap itself clears it, and covers casks added here in future before
+they exist:
+
+```sh
+brew trust --tap perpetualbeta/jorvik
+```
+
+Installing by name is unaffected either way — `brew install --cask` grants trust
+to the cask you named as part of the install, so a first-time install never
+needs any of this.
+
 ## The catalogue
 
 | Cask | What it is |
