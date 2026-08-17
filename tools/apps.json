@@ -155,6 +155,19 @@
     "arch": null,
     "appcast": "https://jorviksoftware.cc/appcasts/jorvikdailynews.xml"
   },
+  "Kairos": {
+    "token": "kairos",
+    "name": "Kairos",
+    "desc": "Front end for launchd: see and schedule your user agents",
+    "homepage": "https://jorviksoftware.cc/apps/kairos",
+    "bundle": "Kairos.app",
+    "kind": "app",
+    "bundleID": "cc.jorviksoftware.Kairos",
+    "zipName": "Kairos.zip",
+    "macos": "sonoma",
+    "arch": null,
+    "appcast": "https://jorviksoftware.cc/appcasts/kairos.xml"
+  },
   "Lookout": {
     "token": "lookout",
     "name": "Lookout",
