@@ -1,6 +1,6 @@
 cask "browsercommander" do
-  version "2.0.10"
-  sha256 "5389976cce50735a817666dfd673b6eb8249ab9575261c3d722194cbfc6699ac"
+  version "2.1.0"
+  sha256 "4c3bddfebf954c030f453562136e74719ea86ef0b3c6f812a4b01fbcf9ca5514"
 
   url "https://github.com/PerpetualBeta/BrowserCommander/releases/download/v#{version}/BrowserCommander.zip",
       verified: "github.com/PerpetualBeta/BrowserCommander/"
