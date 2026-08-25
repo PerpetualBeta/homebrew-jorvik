@@ -1,6 +1,6 @@
 cask "browsernotes" do
-  version "2.2.0"
-  sha256 "fa930ebd1efefaf1cbe14fea8779493979e9b67239f069cbb8677b0ce97dd4e2"
+  version "2.2.1"
+  sha256 "117792bc362bc5b37612a190506adcd364ab21fa1418699ae8e0ae8370c0fde7"
 
   url "https://github.com/PerpetualBeta/BrowserNotes/releases/download/v#{version}/BrowserNotes.zip",
       verified: "github.com/PerpetualBeta/BrowserNotes/"
