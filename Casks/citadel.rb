@@ -1,6 +1,6 @@
 cask "citadel" do
-  version "1.1.1"
-  sha256 "6427fabeafcf53ea8114101e228e85b335a5ce045a30176c0b2d9690f712b54a"
+  version "1.1.2"
+  sha256 "e2ad3e6961548e33b698ca072157bd19209bd9b9fb0ed1e7c6e8bc7ab0287e7d"
 
   url "https://github.com/PerpetualBeta/Citadel/releases/download/v#{version}/Citadel.zip",
       verified: "github.com/PerpetualBeta/Citadel/"
