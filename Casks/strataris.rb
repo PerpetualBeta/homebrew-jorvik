@@ -1,6 +1,6 @@
 cask "strataris" do
-  version "1.0.0"
-  sha256 "dbb9d113ce475690c4c3f0e8d81bd49dbffdd2ba83d4d0e60f57c8db53c29189"
+  version "1.0.1"
+  sha256 "33b392c9bd8929c1941605bc957bf90c997049ff6c7920772a9cfca7e03e6111"
 
   url "https://github.com/PerpetualBeta/Strataris/releases/download/v#{version}/Strataris.zip",
       verified: "github.com/PerpetualBeta/Strataris/"
