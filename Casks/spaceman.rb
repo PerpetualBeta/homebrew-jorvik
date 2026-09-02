@@ -1,6 +1,6 @@
 cask "spaceman" do
-  version "2.0.10"
-  sha256 "84093b39549ad07d0d3f20bf930cc6e2fc72e94da5fbdc4c06db9691c2d459fc"
+  version "2.0.11"
+  sha256 "9f7b5b7026a4e9987c58181232735da2cd67e97c2472cdddb9b453f0f97c028a"
 
   url "https://github.com/PerpetualBeta/SpaceMan/releases/download/v#{version}/SpaceMan.zip",
       verified: "github.com/PerpetualBeta/SpaceMan/"
@@ -12,6 +12,8 @@ cask "spaceman" do
     url :url
     strategy :github_latest
   end
+
+  deprecate! date: "2026-09-02", because: "is retired and no longer maintained; use RememberMyWindows instead"
 
   auto_updates true
   depends_on macos: :sonoma
