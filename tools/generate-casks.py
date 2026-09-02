@@ -107,6 +107,15 @@ def render(repo, app, version, sha):
 
     lines += ["  end", ""]
 
+    # A retired app. Homebrew prints the reason on every install and upgrade,
+    # and existing installs keep working, so nobody is cut off by it. Stanza
+    # order matters to rubocop: deprecate! sits after livecheck and before
+    # auto_updates.
+    if app.get("deprecate"):
+        d = app["deprecate"]
+        lines.append(f'  deprecate! date: "{d["date"]}", because: "{d["because"]}"')
+        lines.append("")
+
     if app["appcast"]:
         # Sparkle owns updates; without this brew would fight it and report a
         # version mismatch every time the app updated itself.

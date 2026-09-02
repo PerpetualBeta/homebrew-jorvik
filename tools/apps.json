@@ -296,7 +296,11 @@
     "zipName": "SpaceMan.zip",
     "macos": "sonoma",
     "arch": null,
-    "appcast": "https://jorviksoftware.cc/appcasts/spaceman.xml"
+    "appcast": "https://jorviksoftware.cc/appcasts/spaceman.xml",
+    "deprecate": {
+      "date": "2026-09-02",
+      "because": "is retired and no longer maintained; use RememberMyWindows instead"
+    }
   },
   "Strataris": {
     "token": "strataris",
