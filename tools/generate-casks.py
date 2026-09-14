@@ -128,10 +128,15 @@ def render(repo, app, version, sha):
 
     if app.get("artifact") == "pkg":
         # Some products are more than one bundle and the installer is the only
-        # thing that places all of them. ASCII Saver is the case in point: its
-        # .pkg carries both the .saver and the camera agent the saver needs in
+        # thing that places all of them. ASCII Saver was the case in point: its
+        # .pkg carried both the .saver and the camera agent the saver needed in
         # order to be granted camera access, so shipping just the zipped .saver
-        # would install something that cannot work.
+        # would have installed something that could not work.
+        #
+        # No app takes this branch today. ASCII Saver 2.0 became a regular
+        # .app and left it, and nothing has replaced it. Kept because the next
+        # multi-bundle product will want it; an app opts in by setting
+        # "artifact": "pkg" and "pkgutil" in apps.json.
         lines.append(f'  pkg "{app["zipName"]}"')
         lines.append("")
         lines.append(f'  uninstall pkgutil: "{app["pkgutil"]}"')
