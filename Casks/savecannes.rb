@@ -2,8 +2,7 @@ cask "savecannes" do
   version "1.0.1"
   sha256 "28fbc866fe4eabef1d47bb8e0cefc22576bbe3e16fcce98b44c212c0088bb684"
 
-  url "https://github.com/PerpetualBeta/SaveCannes/releases/download/v#{version}/SaveCannes.zip",
-      verified: "github.com/PerpetualBeta/SaveCannes/"
+  url "https://github.com/PerpetualBeta/SaveCannes/releases/download/v#{version}/SaveCannes.zip"
   name "Save Cannes"
   desc "Screen saver that plays your own films, photographs and live streams"
   homepage "https://jorviksoftware.cc/screensavers/savecannes"

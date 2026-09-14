@@ -2,8 +2,7 @@ cask "browsercommander" do
   version "2.1.2"
   sha256 "bd7e75fc5f0f0a8d84975703736f5a5f7dff8b7b5456884be2d9db90d269b8b4"
 
-  url "https://github.com/PerpetualBeta/BrowserCommander/releases/download/v#{version}/BrowserCommander.zip",
-      verified: "github.com/PerpetualBeta/BrowserCommander/"
+  url "https://github.com/PerpetualBeta/BrowserCommander/releases/download/v#{version}/BrowserCommander.zip"
   name "Browser Commander"
   desc "Keyboard-driven back, forward and link navigation for browsers"
   homepage "https://jorviksoftware.cc/utilities/browsercommander"

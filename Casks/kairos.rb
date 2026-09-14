@@ -2,8 +2,7 @@ cask "kairos" do
   version "1.1.1"
   sha256 "fa7622c13c49eb251d7f2cd6bf13198fa436c4cc73651c7de1e307e15e95d0b0"
 
-  url "https://github.com/PerpetualBeta/Kairos/releases/download/v#{version}/Kairos.zip",
-      verified: "github.com/PerpetualBeta/Kairos/"
+  url "https://github.com/PerpetualBeta/Kairos/releases/download/v#{version}/Kairos.zip"
   name "Kairos"
   desc "Front end for launchd: see and schedule your user agents"
   homepage "https://jorviksoftware.cc/apps/kairos"

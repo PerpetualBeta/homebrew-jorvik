@@ -2,8 +2,7 @@ cask "rainy-day" do
   version "1.1.14"
   sha256 "ef731d96d7a9b16ec404307fa300f9fb8fbea8faf1e52ab0c30ac4056614a716"
 
-  url "https://github.com/PerpetualBeta/RainyDay/releases/download/v#{version}/RainyDay.zip",
-      verified: "github.com/PerpetualBeta/RainyDay/"
+  url "https://github.com/PerpetualBeta/RainyDay/releases/download/v#{version}/RainyDay.zip"
   name "Rainy Day"
   desc "Screen saver of raindrops refracting eight atmospheric photographs"
   homepage "https://jorviksoftware.cc/screensavers/rainyday"

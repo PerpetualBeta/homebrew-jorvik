@@ -2,8 +2,7 @@ cask "hypercaps" do
   version "2.0.13"
   sha256 "ff63852866d1ee2d364489869ba4e186cb77b99791cdc14f3933987b32d0199e"
 
-  url "https://github.com/PerpetualBeta/HyperCaps/releases/download/v#{version}/HyperCaps.zip",
-      verified: "github.com/PerpetualBeta/HyperCaps/"
+  url "https://github.com/PerpetualBeta/HyperCaps/releases/download/v#{version}/HyperCaps.zip"
   name "HyperCaps"
   desc "Turn Caps Lock into a Hyper key for conflict-free shortcuts"
   homepage "https://jorviksoftware.cc/utilities/hypercaps"

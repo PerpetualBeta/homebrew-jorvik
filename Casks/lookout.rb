@@ -2,8 +2,7 @@ cask "lookout" do
   version "1.1.6"
   sha256 "52813f9e82c1fcd4a5e2c3650473c3ac0fab094bb167bf948d0d9423c0c0556f"
 
-  url "https://github.com/PerpetualBeta/Lookout/releases/download/v#{version}/Lookout.zip",
-      verified: "github.com/PerpetualBeta/Lookout/"
+  url "https://github.com/PerpetualBeta/Lookout/releases/download/v#{version}/Lookout.zip"
   name "Lookout"
   desc "Menu-bar watcher for GitHub notifications, reviews and failing CI"
   homepage "https://jorviksoftware.cc/utilities/lookout"

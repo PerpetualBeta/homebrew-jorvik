@@ -2,8 +2,7 @@ cask "ballast" do
   version "1.1.9"
   sha256 "7bcd86e15048baeaed1340a4f6278a479cd8c113c9766b5661ebbde78dacc58c"
 
-  url "https://github.com/PerpetualBeta/Ballast/releases/download/v#{version}/Ballast.zip",
-      verified: "github.com/PerpetualBeta/Ballast/"
+  url "https://github.com/PerpetualBeta/Ballast/releases/download/v#{version}/Ballast.zip"
   name "Ballast"
   desc "Menu-bar loudness leveller with per-track EBU R128 normalisation"
   homepage "https://jorviksoftware.cc/utilities/ballast"

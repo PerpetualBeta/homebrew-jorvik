@@ -2,8 +2,7 @@ cask "strataris" do
   version "1.0.1"
   sha256 "33b392c9bd8929c1941605bc957bf90c997049ff6c7920772a9cfca7e03e6111"
 
-  url "https://github.com/PerpetualBeta/Strataris/releases/download/v#{version}/Strataris.zip",
-      verified: "github.com/PerpetualBeta/Strataris/"
+  url "https://github.com/PerpetualBeta/Strataris/releases/download/v#{version}/Strataris.zip"
   name "Strataris"
   desc "Colony-defence shoot-'em-up with procedurally generated worlds"
   homepage "https://jorviksoftware.cc/games/strataris"

@@ -2,8 +2,7 @@ cask "jorvik-daily-news" do
   version "1.6.0"
   sha256 "c1da36b8cfc489e0ea67d306a39bfa5517a6340d226b05d10d111be850e52fc8"
 
-  url "https://github.com/PerpetualBeta/JorvikDailyNews/releases/download/v#{version}/JorvikDailyNews.zip",
-      verified: "github.com/PerpetualBeta/JorvikDailyNews/"
+  url "https://github.com/PerpetualBeta/JorvikDailyNews/releases/download/v#{version}/JorvikDailyNews.zip"
   name "Jorvik Daily News"
   desc "RSS reader that publishes a finite, today-only newspaper"
   homepage "https://jorviksoftware.cc/apps/dailynews"

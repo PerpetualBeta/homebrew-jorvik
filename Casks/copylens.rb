@@ -2,8 +2,7 @@ cask "copylens" do
   version "1.1.4"
   sha256 "85e2233bf784fa94114a29bf652cc62f09ef06622f0492f9c6368555aaf5295f"
 
-  url "https://github.com/PerpetualBeta/CopyLens/releases/download/v#{version}/CopyLens.zip",
-      verified: "github.com/PerpetualBeta/CopyLens/"
+  url "https://github.com/PerpetualBeta/CopyLens/releases/download/v#{version}/CopyLens.zip"
   name "CopyLens"
   desc "Capture any screen region as a table, as text, or as an image"
   homepage "https://jorviksoftware.cc/utilities/copylens"
