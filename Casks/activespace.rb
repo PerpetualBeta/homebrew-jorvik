@@ -1,6 +1,6 @@
 cask "activespace" do
-  version "2.1.19"
-  sha256 "39ff90a323ca17313793bfa772e6cc8bd1d67b70d0e274cc4ba1efe036c43b16"
+  version "2.2.0"
+  sha256 "cdcf0cf7a0816970d015e888a390d8445c4ddd916b9919a28659c13d7c9f7559"
 
   url "https://github.com/PerpetualBeta/ActiveSpace/releases/download/v#{version}/ActiveSpace.zip"
   name "ActiveSpace"
