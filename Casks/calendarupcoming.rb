@@ -1,6 +1,6 @@
 cask "calendarupcoming" do
-  version "2.1.7"
-  sha256 "f123c159261df7ebca55bd39c6f6b65157a4f3d71c2cc29f01a6ef097782b29f"
+  version "2.1.8"
+  sha256 "c7b1c080b0bd925ca09a8cd9c166f54e3b8baab63b0e0313ed1de89da2372f33"
 
   url "https://github.com/PerpetualBeta/CalendarUpcoming/releases/download/v#{version}/CalendarUpcoming.zip"
   name "CalendarUpcoming"
