@@ -1,6 +1,6 @@
 cask "ballast" do
-  version "1.1.11"
-  sha256 "863f277138d74546466468ef565829a6a006214b47bd012ee6c379a53302c5e6"
+  version "1.1.12"
+  sha256 "57688de64c5403c0ed6e53e180d29c51ba4c2f880993ef5be8c89946e033f84b"
 
   url "https://github.com/PerpetualBeta/Ballast/releases/download/v#{version}/Ballast.zip"
   name "Ballast"
