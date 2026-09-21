@@ -1,6 +1,6 @@
 cask "screenlock" do
-  version "2.0.12"
-  sha256 "e6f8aee587988ca10519d2d88e3d9287434f0a4f954aefa89889fb914c01544f"
+  version "2.0.13"
+  sha256 "dcde0fa29328257a844a2d3d85d86fc6239d39f6538d2215a90874d3300e7c33"
 
   url "https://github.com/PerpetualBeta/ScreenLock/releases/download/v#{version}/ScreenLock.zip"
   name "ScreenLock"
