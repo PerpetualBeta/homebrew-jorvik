@@ -1,6 +1,6 @@
 cask "windowpin" do
-  version "2.1.9"
-  sha256 "dc9d4563b260fc46f7b18837b7b756bf3c702afd30cd55cb7a48639e94411e06"
+  version "2.1.10"
+  sha256 "576dc61042515ec30b7c68105946e16e800aa7317a1a002aa9c0997903b8697e"
 
   url "https://github.com/PerpetualBeta/WindowPin/releases/download/v#{version}/WindowPin.zip"
   name "WindowPin"
