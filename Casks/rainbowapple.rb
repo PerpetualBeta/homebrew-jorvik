@@ -1,6 +1,6 @@
 cask "rainbowapple" do
-  version "2.0.18"
-  sha256 "3dc5fe62b499a783f1aeca50ebcc4f0e3b13401e206f83115e5417fc8500008c"
+  version "2.0.19"
+  sha256 "18781d0b65ceca1151e1f5e00645e6a6b39f01437b60049b1a5fa6656984f88d"
 
   url "https://github.com/PerpetualBeta/RainbowApple/releases/download/v#{version}/RainbowApple.zip"
   name "RainbowApple"
