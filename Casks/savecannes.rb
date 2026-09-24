@@ -1,6 +1,6 @@
 cask "savecannes" do
-  version "1.4.0"
-  sha256 "4e7628165f8c686d268c1130840611188086b4988308c3e6f1dcddb62c64bc8e"
+  version "1.5.0"
+  sha256 "436b2f643bd9da3e66937a74a299c5b7e46dc112b8d774856c438dc5e7dc1312"
 
   url "https://github.com/PerpetualBeta/SaveCannes/releases/download/v#{version}/SaveCannes.zip"
   name "Save Cannes"
