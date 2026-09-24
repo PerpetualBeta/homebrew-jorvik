@@ -1,6 +1,6 @@
 cask "copylens" do
-  version "1.1.9"
-  sha256 "b4992151f72e97694c47554402c8d06ea3308978cf2afd40d53714e0cfefa790"
+  version "1.1.10"
+  sha256 "b022249af760da7b6dc0ab7ef270559ef64159e1f36b9beb7bf2965cfc30ad26"
 
   url "https://github.com/PerpetualBeta/CopyLens/releases/download/v#{version}/CopyLens.zip"
   name "CopyLens"
