@@ -1,6 +1,6 @@
 cask "menutidy" do
-  version "2.3.9"
-  sha256 "4645e30b16a09eb83d750390b84f0715107e3b4a93dc61a5232ebb30b333a197"
+  version "2.3.10"
+  sha256 "6d19f24987cb675ecc0efd83877d5a84b907ee605b307f2cb21d5f13b69f5053"
 
   url "https://github.com/PerpetualBeta/MenuTidy/releases/download/v#{version}/MenuTidy.zip"
   name "MenuTidy"
