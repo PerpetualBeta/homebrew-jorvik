@@ -1,6 +1,6 @@
 cask "lookout" do
-  version "1.2.1"
-  sha256 "f1fdb9fd760b2eebfa2ca2925aaa36da377b5a44da19a15852f9798792983994"
+  version "1.2.2"
+  sha256 "c4dcc1549dca5bda79d6ba511e38b183c993616167541ea76cce107b3f9d6c81"
 
   url "https://github.com/PerpetualBeta/Lookout/releases/download/v#{version}/Lookout.zip"
   name "Lookout"
