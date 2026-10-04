@@ -207,6 +207,19 @@
     "arch": null,
     "appcast": "https://jorviksoftware.cc/appcasts/mirrorguard.xml"
   },
+  "Nomen": {
+    "token": "nomen",
+    "name": "Nomen",
+    "desc": "Rename screenshots by what they show, using on-device Apple Intelligence",
+    "homepage": "https://jorviksoftware.cc/utilities/nomen",
+    "bundle": "Nomen.app",
+    "kind": "app",
+    "bundleID": "cc.jorviksoftware.Nomen",
+    "zipName": "Nomen.zip",
+    "macos": "sonoma",
+    "arch": null,
+    "appcast": "https://jorviksoftware.cc/appcasts/nomen.xml"
+  },
   "QuitProtect": {
     "token": "quitprotect",
     "name": "QuitProtect",

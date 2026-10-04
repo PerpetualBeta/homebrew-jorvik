@@ -66,6 +66,7 @@ needs any of this.
 | `lookout` | Menu-bar watcher for GitHub notifications, reviews and failing CI |
 | `menutidy` | Menu bar manager that collapses third-party icons behind a chevron |
 | `mirrorguard` | Block the accidental display-mirroring keyboard shortcut |
+| `nomen` | Rename screenshots by what they show, using on-device Apple Intelligence |
 | `quitprotect` | Prevent accidental quits with double-press or hold-to-quit |
 | `rainbowapple` | Replace the menu-bar Apple logo with the 1977 six-colour version |
 | `rainy-day` | Screen saver of raindrops refracting eight atmospheric photographs |
