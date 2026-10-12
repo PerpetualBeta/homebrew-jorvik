@@ -1,6 +1,6 @@
 cask "kairos" do
-  version "1.1.3"
-  sha256 "0f1eff5e085cf0c37f23209345b4b22870034351b50826aae994126e4338365b"
+  version "1.1.4"
+  sha256 "ce1dbe6179399bf4ce4db7b18c8d2f9422138387ec41a873dadc025070c21d66"
 
   url "https://github.com/PerpetualBeta/Kairos/releases/download/v#{version}/Kairos.zip"
   name "Kairos"
