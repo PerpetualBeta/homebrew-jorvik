@@ -1,6 +1,6 @@
 cask "nomen" do
-  version "1.0.2"
-  sha256 "14f779412c171fa16b13476e72a0f694f90ec4cbb1f0826ea9fba7727ef0d2bc"
+  version "1.0.3"
+  sha256 "5803e184e6c59fb8825646c7291d7c2f3b30fbb0eaacdfff6b290f3426fe4e0a"
 
   url "https://github.com/PerpetualBeta/Nomen/releases/download/v#{version}/Nomen.zip"
   name "Nomen"
