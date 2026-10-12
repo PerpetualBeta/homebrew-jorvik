@@ -1,6 +1,6 @@
 cask "jorvik-hawkeye" do
-  version "1.0.12"
-  sha256 "415cd068c58c8d151753c81144cfe42f6a1cf937997f172458a35b051b1bc248"
+  version "1.0.13"
+  sha256 "23a7fbc39f1bcd3e2c5f0cb7e47d3be122a3d18f5b1aec79a5db33cd71e6be85"
 
   url "https://github.com/PerpetualBeta/HawkEye/releases/download/v#{version}/HawkEye.zip"
   name "HawkEye"
