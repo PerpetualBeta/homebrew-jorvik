@@ -16,7 +16,11 @@ concurrency:
 
 jobs:
   refresh:
-    runs-on: macos-latest
+    # Linux on purpose: the generator only needs gh, python3 and git, and the
+    # hosted macOS arm64 pool can run dry. On 2026-11-03 a run sat queued for
+    # 15 minutes and was cancelled without a runner. CI stays on macOS because
+    # brew audit needs it.
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
